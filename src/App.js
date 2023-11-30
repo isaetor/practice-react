@@ -3,7 +3,19 @@ import './assets/css/App.css';
 
 function App() {
   const name = "saeed"
-  return (<div> Hello {name}! </div>)
+  return (
+    <Job salary={125000} position="Developer" company="google" />
+  )
+}
+
+const Job = (props)=>{
+  return (
+    <div>
+      <h1>{props.salary}</h1>
+      <p>{props.position}</p>
+      <span>{props.company}</span>
+    </div>
+  )
 }
 
 export default App;
