@@ -1,0 +1,156 @@
+body {
+    background-color: rgb(48, 48, 48) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.todo-app {
+    width: 800px;
+    height: 600px;
+    border-radius: 15px;
+    margin: 80px 0px;
+}
+.input-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.input-section input[type="text"] {
+    flex-grow: 1;
+    padding: 16px;
+    border: none;
+    background-color: rgb(33, 33, 33);
+    color: #fff;
+    font-size: 16px;
+    border-radius: 50px;
+    transition: background-color 0.5s ease;
+}
+.input-section input[type="text"]::placeholder {
+    color: #ddd;
+}
+.input-section input[type="text"]:focus {
+    outline: none;
+    background-color: #555;
+}
+
+.input-section button {
+    padding: 16px 24px;
+    border: none;
+    background-color: rgb(33, 33, 33);
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.input-section button:hover {
+    outline: none;
+    background-color: #555;
+}
+
+
+.todos {
+    height: 500px;
+    margin-top: 20px;
+    padding: 14px;
+    background-color: rgb(33, 33, 33);
+    border-radius: 50px;
+    -webkit-box-shadow: 9px 21px 30px -19px rgba(0, 0, 0, 0.63);
+    -moz-box-shadow: 9px 21px 30px -19px rgba(0, 0, 0, 0.63);
+    box-shadow: 9px 21px 30px -19px rgba(0, 0, 0, 0.63);
+    overflow-y: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; 
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.todos::-webkit-scrollbar {
+    display: none;
+}
+
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.todo-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 8px 8px 20px;
+    background-color: rgb(38 37 37);
+    border-radius: 50px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.todo-list li:last-child{
+    margin-bottom: unset;
+}
+.todo-list li span {
+    color: #fff;
+}
+
+.not-found{
+    color: #fff;
+    top: 60%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 30%;
+}
+.container {
+    display: block;
+    position: relative;
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .container input {
+    display: none;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #404040;
+    border-radius: 8px;
+  }
+  
+  .container:hover input ~ .checkmark {
+    background-color: #555555;
+  }
+  
+  .container input:checked ~ .checkmark {
+    background-color: #21f336;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
